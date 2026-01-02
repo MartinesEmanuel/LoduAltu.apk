@@ -20,7 +20,7 @@ export async function buscarSaldosGoogleSheets(): Promise<{ [key: string]: numbe
       throw new Error(resultado.mensagem);
     }
 
-    // Os valores já vêm como string, converter para número
+    
     const saldos: { [key: string]: number } = {};
     Object.entries(resultado.dados).forEach(([sigla, valor]) => {
       saldos[sigla] = Number(valor);
@@ -75,7 +75,7 @@ export interface ApiResponse {
   timestamp?: string;
 }
 
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxryojEEdlZhlaPYeUoDOwQIHeqh7Q3bSC8Fh_urBda_hn5idXv87sg0nDME9rjUcZc/exec';
+const GOOGLE_SCRIPT_URL = '';
 
 /**
  * Envia array de compras para o Google Sheets (uma única requisição)
